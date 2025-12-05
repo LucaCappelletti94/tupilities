@@ -14,6 +14,8 @@ mod tupilities_option;
 mod tupilities_ord;
 mod tupilities_partial_eq;
 mod tupilities_partial_ord;
+mod tupilities_pop_back;
+mod tupilities_pop_front;
 mod tupilities_ref;
 mod tuple_size;
 
@@ -94,6 +96,22 @@ pub fn impl_tuple_partial_ord(_attr: TokenStream, item: TokenStream) -> TokenStr
 pub fn impl_tuple_ord(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let mut item = proc_macro2::TokenStream::from(item);
     item.extend(tupilities_ord::impl_tuple_ord());
+    item.into()
+}
+
+/// Generate `PopFront` trait implementations for all tuple sizes.
+#[proc_macro_attribute]
+pub fn impl_pop_front(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_pop_front::impl_pop_front());
+    item.into()
+}
+
+/// Generate `PopBack` trait implementations for all tuple sizes.
+#[proc_macro_attribute]
+pub fn impl_pop_back(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_pop_back::impl_pop_back());
     item.into()
 }
 

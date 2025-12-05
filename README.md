@@ -33,6 +33,8 @@ The library provides several traits for working with tuples:
 - `IntoTupleOption`: Provides an `into_options()` method to convert a tuple into a tuple of options.
 - `TupleRef`: Provides a `tuple_ref()` method to get references to each element in the tuple.
 - `TupleMut`: Provides a `tuple_mut()` method to get mutable references to each element in the tuple.
+- `PopFront`: Provides a `pop_front()` method to remove and return the first element of the tuple along with the remaining elements as a new tuple.
+- `PopBack`: Provides a `pop_back()` method to remove and return the last element of the tuple along with the remaining elements as a new tuple.
 
 ## Features
 

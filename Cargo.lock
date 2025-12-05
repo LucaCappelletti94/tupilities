@@ -52,6 +52,8 @@ dependencies = [
  "tupilities-ord",
  "tupilities-partial-eq",
  "tupilities-partial-ord",
+ "tupilities-pop-back",
+ "tupilities-pop-front",
  "tupilities-ref",
 ]
 
@@ -138,6 +140,20 @@ dependencies = [
 
 [[package]]
 name = "tupilities-partial-ord"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
+name = "tupilities-pop-back"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
+name = "tupilities-pop-front"
 version = "0.1.0"
 dependencies = [
  "tupilities-derive",

@@ -14,5 +14,7 @@ pub mod prelude {
     pub use tupilities_ord::TupleOrd;
     pub use tupilities_partial_eq::TuplePartialEq;
     pub use tupilities_partial_ord::TuplePartialOrd;
+    pub use tupilities_pop_back::PopBack;
+    pub use tupilities_pop_front::PopFront;
     pub use tupilities_ref::TupleRef;
 }

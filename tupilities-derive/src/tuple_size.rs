@@ -87,6 +87,14 @@ where
     (0..=MAX_TUPLE_SIZE).map(impl_fn).collect()
 }
 
+/// Generate all tuple implementations from size 0 (unit) to MAX_TUPLE_SIZE
+pub(crate) fn generate_non_empty<F>(impl_fn: F) -> TokenStream
+where
+    F: Fn(usize) -> TokenStream,
+{
+    (1..=MAX_TUPLE_SIZE).map(impl_fn).collect()
+}
+
 mod tests {
     #[test]
     fn test_type_params() {
