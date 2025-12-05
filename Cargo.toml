@@ -3,6 +3,7 @@ resolver = "2"
 
 members = [
 	"tupilities",
+	"tupilities-as-ref",
 	"tupilities-clone",
 	"tupilities-copy",
 	"tupilities-debug",
@@ -12,6 +13,7 @@ members = [
 ]
 
 [workspace.dependencies]
+tupilities-as-ref = { path = "tupilities-as-ref" }
 tupilities-clone = { path = "tupilities-clone" }
 tupilities-copy = { path = "tupilities-copy" }
 tupilities-debug = { path = "tupilities-debug" }

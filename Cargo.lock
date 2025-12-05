@@ -41,11 +41,19 @@ dependencies = [
 name = "tupilities"
 version = "0.1.0"
 dependencies = [
+ "tupilities-as-ref",
  "tupilities-clone",
  "tupilities-copy",
  "tupilities-debug",
  "tupilities-default",
  "tupilities-hash",
+]
+
+[[package]]
+name = "tupilities-as-ref"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
 ]
 
 [[package]]

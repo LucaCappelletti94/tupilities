@@ -2,6 +2,7 @@
 
 use proc_macro::TokenStream;
 
+mod tupilities_as_ref;
 mod tupilities_clone;
 mod tupilities_copy;
 mod tupilities_debug;
@@ -46,5 +47,13 @@ pub fn impl_tuple_default(_attr: TokenStream, item: TokenStream) -> TokenStream 
 pub fn impl_tuple_hash(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let mut item = proc_macro2::TokenStream::from(item);
     item.extend(tupilities_hash::impl_tuple_hash());
+    item.into()
+}
+
+/// Generate `TupleAsRef` trait implementations for all tuple sizes.
+#[proc_macro_attribute]
+pub fn impl_tuple_as_ref(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_as_ref::impl_tuple_as_ref());
     item.into()
 }

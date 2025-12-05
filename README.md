@@ -26,6 +26,7 @@ The library provides several traits for working with tuples:
 - `TupleDefault`: Provides a `tuple_default()` method to create default instances of tuples. All elements must implement `Default`.
 - `TupleHash`: Provides a `tuple_hash<H: Hasher>()` method to hash tuples with any hasher. All elements must implement `Hash`.
 - `TupleSipHasher24`: Provides a `tuple_sip_hash()` method that returns a hash value using SipHasher24. All elements must implement `Hash`.
+- `TupleAsRef`: Provides an `as_tuple_ref()` method that returns a tuple of references to a common type. All elements must implement `AsRef<T>` for the same `T`.
 
 ## Features
 

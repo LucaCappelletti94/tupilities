@@ -65,8 +65,12 @@ pub const MAX_TUPLE_SIZE: usize = 128;
 ///
 /// * `count` - The number of type parameters to generate.
 pub(crate) fn type_params(count: usize) -> Vec<Ident> {
+    type_params_with_prefix(count, "T")
+}
+
+pub(crate) fn type_params_with_prefix(count: usize, prefix: &str) -> Vec<Ident> {
     (1..=count)
-        .map(|i| Ident::new(&format!("T{i}"), Span::call_site()))
+        .map(|i| Ident::new(&format!("{prefix}{i}"), Span::call_site()))
         .collect()
 }
 
