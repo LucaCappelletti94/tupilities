@@ -17,6 +17,8 @@
 /// let refs = tuple.tuple_ref();
 /// assert_eq!(refs, (&1, &"hello".to_string(), &vec![1, 2, 3]));
 /// ```
+/// 
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 pub trait TupleRef {
     /// The type of a tuple containing references to each element.
     type Ref<'a>

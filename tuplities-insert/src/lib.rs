@@ -20,6 +20,8 @@
 /// let inserted = TupleInsert::<U1, _>::insert(tuple, "hello");
 /// assert_eq!(inserted, (1, "hello", 3.14));
 /// ```
+/// 
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 #[tuplities_derive::impl_insert]
 pub trait TupleInsert<Idx: typenum::Unsigned, T> {
     /// The type of the tuple after inserting the element.

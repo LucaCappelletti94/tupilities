@@ -6,6 +6,8 @@ use tuplities_clone::TupleClone;
 
 #[tuplities_derive::impl_tuple_copy]
 /// A trait for copying tuples.
+///
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 pub trait TupleCopy: TupleClone {
     #[must_use]
     /// Copies `self` into a new instance.

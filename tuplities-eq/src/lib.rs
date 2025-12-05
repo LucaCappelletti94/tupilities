@@ -4,6 +4,8 @@
 
 #[tuplities_derive::impl_tuple_eq]
 /// A trait for comparing tuples for total equality.
+///
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 pub trait TupleEq {
     /// Returns `true` if `self` and `other` are equal.
     ///

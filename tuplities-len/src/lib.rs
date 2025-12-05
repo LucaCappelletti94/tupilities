@@ -9,6 +9,8 @@
 ///
 /// This trait provides the length of a tuple as an associated type `Idx`
 /// that implements `typenum::Unsigned`.
+/// 
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 #[tuplities_derive::impl_len]
 pub trait TupleLen {
     /// The length of the tuple as a `typenum::Unsigned` type.

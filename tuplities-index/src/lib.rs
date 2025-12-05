@@ -20,6 +20,8 @@
 /// let element = TupleIndex::<U1>::tuple_index(&tuple);
 /// assert_eq!(*element, "hello");
 /// ```
+/// 
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 #[tuplities_derive::impl_tuple_index]
 pub trait TupleIndex<Idx: typenum::Unsigned> {
     /// The type of the element at index `Idx`.
@@ -45,6 +47,8 @@ pub trait TupleIndex<Idx: typenum::Unsigned> {
 /// *element = "world";
 /// assert_eq!(tuple.1, "world");
 /// ```
+/// 
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 pub trait TupleIndexMut<Idx: typenum::Unsigned>: TupleIndex<Idx> {
     /// Returns a mutable reference to the element at index `Idx`.
     fn tuple_index_mut(&mut self) -> &mut Self::Type;

@@ -5,6 +5,8 @@ extern crate alloc;
 
 #[tuplities_derive::impl_tuple_debug]
 /// A trait for debugging tuples.
+///
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 pub trait TupleDebug {
     /// Returns a string representation of the tuple for debugging.
     ///

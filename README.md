@@ -60,7 +60,7 @@ The project is split into multiple crates for improved compile times:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contribution
 

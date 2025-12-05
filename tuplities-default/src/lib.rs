@@ -4,6 +4,8 @@
 
 #[tuplities_derive::impl_tuple_default]
 /// A trait for creating default instances of tuples.
+///
+/// Part of the [`tuplities`](https://docs.rs/tuplities/latest/tuplities/) crate.
 pub trait TupleDefault {
     /// Returns the default value of the tuple.
     ///
