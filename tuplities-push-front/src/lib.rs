@@ -21,3 +21,17 @@ pub trait TuplePushFront<T> {
     /// ```
     fn push_front(self, value: T) -> Self::Output;
 }
+
+#[cfg(test)]
+mod tests {
+    use super::TuplePushFront;
+
+    #[test]
+    fn test_push_front_zero_sized_tuple() {
+        let tuple: () = ();
+        let result: (i32,) = tuple.push_front(42);
+        // Check that the type is correct: i32 + () = (i32,)
+        let expected: (i32,) = (42,);
+        assert_eq!(result, expected);
+    }
+}
