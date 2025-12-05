@@ -153,6 +153,7 @@ dependencies = [
 name = "tuplities-option"
 version = "0.1.0"
 dependencies = [
+ "tuplities-default",
  "tuplities-derive",
 ]
 

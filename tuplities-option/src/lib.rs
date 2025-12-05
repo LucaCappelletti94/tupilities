@@ -2,9 +2,11 @@
 
 //! [tuplities](https://github.com/lucacappelletti94/tuplities) suite crate providing the `TupleOption` and `IntoTupleOption` traits.
 
+use tuplities_default::TupleDefault;
+
 #[tuplities_derive::impl_tuple_option]
 /// A trait for transposing a tuple of options into an option of a tuple.
-pub trait TupleOption {
+pub trait TupleOption: TupleDefault {
     /// The transposed type: an option of the tuple of the inner types.
     type Transposed: IntoTupleOption<IntoOptions = Self>;
 
@@ -31,7 +33,7 @@ pub trait TupleOption {
 /// A trait for converting a tuple into a tuple of options.
 pub trait IntoTupleOption {
     /// The tuple of options type.
-    type IntoOptions: TupleOption<Transposed = Self>;
+    type IntoOptions: TupleOption<Transposed = Self> + TupleDefault;
 
     /// Converts the tuple into a tuple of `Some` values.
     ///

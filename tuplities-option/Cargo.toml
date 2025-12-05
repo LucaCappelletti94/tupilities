@@ -10,9 +10,9 @@ keywords.workspace = true
 categories.workspace = true
 homepage.workspace = true
 
-
 [dependencies]
 tuplities-derive.workspace = true
+tuplities-default.workspace = true
 
 [lints]
 workspace = true
