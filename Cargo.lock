@@ -39,7 +39,7 @@ dependencies = [
 
 [[package]]
 name = "tuplities"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-clone",
  "tuplities-copy",
@@ -65,14 +65,14 @@ dependencies = [
 
 [[package]]
 name = "tuplities-clone"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-copy"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-clone",
  "tuplities-derive",
@@ -80,21 +80,21 @@ dependencies = [
 
 [[package]]
 name = "tuplities-debug"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-default"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-derive"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -105,14 +105,14 @@ dependencies = [
 
 [[package]]
 name = "tuplities-eq"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-hash"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "siphasher",
  "tuplities-derive",
@@ -120,7 +120,7 @@ dependencies = [
 
 [[package]]
 name = "tuplities-index"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
  "typenum",
@@ -128,7 +128,7 @@ dependencies = [
 
 [[package]]
 name = "tuplities-insert"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
  "typenum",
@@ -136,7 +136,7 @@ dependencies = [
 
 [[package]]
 name = "tuplities-len"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
  "typenum",
@@ -144,14 +144,14 @@ dependencies = [
 
 [[package]]
 name = "tuplities-mut"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-option"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-default",
  "tuplities-derive",
@@ -159,63 +159,63 @@ dependencies = [
 
 [[package]]
 name = "tuplities-ord"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-partial-eq"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-partial-ord"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-pop-back"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-pop-front"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-push-back"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-push-front"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-ref"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
 ]
 
 [[package]]
 name = "tuplities-remove"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "tuplities-derive",
  "typenum",
