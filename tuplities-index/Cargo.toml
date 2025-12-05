@@ -1,0 +1,20 @@
+[package]
+name = "tupilities-index"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+typenum = { workspace = true }
+tupilities-derive = { workspace = true }
+
+[features]
+default = []
+size-16 = ["tupilities-derive/size-16"]
+size-32 = ["tupilities-derive/size-32"]
+size-48 = ["tupilities-derive/size-48"]
+size-64 = ["tupilities-derive/size-64"]
+size-96 = ["tupilities-derive/size-96"]
+size-128 = ["tupilities-derive/size-128"]
+
+[lints]
+workspace = true

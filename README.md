@@ -1,18 +1,18 @@
-# Tupilities
+# tuplities
 
-[![Documentation](https://docs.rs/tupilities/badge.svg)](https://docs.rs/tupilities)
-[![CI](https://github.com/LucaCappelletti94/tupilities/workflows/Rust%20CI/badge.svg)](https://github.com/LucaCappelletti94/tupilities/actions)
-[![Security Audit](https://github.com/LucaCappelletti94/tupilities/workflows/Security%20Audit/badge.svg)](https://github.com/LucaCappelletti94/tupilities/actions)
+[![Documentation](https://docs.rs/tuplities/badge.svg)](https://docs.rs/tuplities)
+[![CI](https://github.com/LucaCappelletti94/tuplities/workflows/Rust%20CI/badge.svg)](https://github.com/LucaCappelletti94/tuplities/actions)
+[![Security Audit](https://github.com/LucaCappelletti94/tuplities/workflows/Security%20Audit/badge.svg)](https://github.com/LucaCappelletti94/tuplities/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://img.shields.io/crates/d/tupilities.svg)](https://crates.io/crates/tupilities)
+[![Downloads](https://img.shields.io/crates/d/tuplities.svg)](https://crates.io/crates/tuplities)
 
-Tuple utilities in Rust, fractioned across several crates to improve compile times. There is a main crate `tupilities` that re-exports traits from subcrates, which can be compiled in parallel cutting down on overall build times.
+Tuple utilities in Rust, fractioned across several crates to improve compile times. There is a main crate `tuplities` that re-exports traits from subcrates, which can be compiled in parallel cutting down on overall build times.
 
 This library is `#[no_std]` compatible, making it suitable for embedded systems and other environments without the standard library.
 
 ```toml
 [dependencies]
-tupilities = "0.1"
+tuplities = "0.1"
 ```
 
 ## Traits
@@ -37,6 +37,9 @@ The library provides several traits for working with tuples:
 - `PopBack`: Provides a `pop_back()` method to remove and return the last element of the tuple along with the remaining elements as a new tuple.
 - `PushFront<T>`: Provides a `push_front(element)` method to add an element to the front of the tuple, returning a new tuple.
 - `PushBack<T>`: Provides a `push_back(element)` method to add an element to the back of the tuple, returning a new tuple.
+- `Pop<Idx>`: Provides a `pop()` method to remove and return the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple along with the remaining elements as a new tuple.
+- `TupleIndex<Idx>`: Provides an `index()` method to access the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple.
+- `TupleIndexMut<Idx>`: Provides an `index_mut()` method to access a mutable reference to the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple.
 
 ## Features
 
@@ -44,16 +47,16 @@ The crate provides features to generate trait implementations for tuples up to d
 
 ```toml
 [dependencies]
-tupilities = { version = "0.1", features = ["size-32"] }
+tuplities = { version = "0.1", features = ["size-32"] }
 ```
 
 ## Architecture
 
 The project is split into multiple crates for improved compile times:
 
-- `tupilities/`: Main crate that re-exports traits from subcrates
-- `tupilities-{trait_name}/`: Individual crates providing specific traits
-- `tupilities-derive/`: Procedural macro crate that generates trait implementations
+- `tuplities/`: Main crate that re-exports traits from subcrates
+- `tuplities-{trait_name}/`: Individual crates providing specific traits
+- `tuplities-derive/`: Procedural macro crate that generates trait implementations
 
 ## License
 
@@ -61,4 +64,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contribution
 
-Contributions are welcome! Please open issues or pull requests on the [GitHub repository](https://github.com/lucac/tupilities).
+Contributions are welcome! Please open issues or pull requests on the [GitHub repository](https://github.com/lucac/tuplities).

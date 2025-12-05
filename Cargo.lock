@@ -38,149 +38,174 @@ dependencies = [
 ]
 
 [[package]]
-name = "tupilities"
+name = "tuplities"
 version = "0.1.0"
 dependencies = [
- "tupilities-clone",
- "tupilities-copy",
- "tupilities-debug",
- "tupilities-default",
- "tupilities-eq",
- "tupilities-hash",
- "tupilities-mut",
- "tupilities-option",
- "tupilities-ord",
- "tupilities-partial-eq",
- "tupilities-partial-ord",
- "tupilities-pop-back",
- "tupilities-pop-front",
- "tupilities-push-back",
- "tupilities-push-front",
- "tupilities-ref",
+ "tuplities-clone",
+ "tuplities-copy",
+ "tuplities-debug",
+ "tuplities-default",
+ "tuplities-eq",
+ "tuplities-hash",
+ "tuplities-index",
+ "tuplities-mut",
+ "tuplities-option",
+ "tuplities-ord",
+ "tuplities-partial-eq",
+ "tuplities-partial-ord",
+ "tuplities-pop",
+ "tuplities-pop-back",
+ "tuplities-pop-front",
+ "tuplities-push-back",
+ "tuplities-push-front",
+ "tuplities-ref",
 ]
 
 [[package]]
-name = "tupilities-clone"
+name = "tuplities-clone"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-copy"
+name = "tuplities-copy"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-debug"
+name = "tuplities-debug"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-default"
+name = "tuplities-default"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-derive"
+name = "tuplities-derive"
 version = "0.1.0"
 dependencies = [
  "proc-macro2",
  "quote",
  "siphasher",
  "syn",
+ "typenum",
 ]
 
 [[package]]
-name = "tupilities-eq"
+name = "tuplities-eq"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-hash"
+name = "tuplities-hash"
 version = "0.1.0"
 dependencies = [
  "siphasher",
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-mut"
+name = "tuplities-index"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
+ "typenum",
 ]
 
 [[package]]
-name = "tupilities-option"
+name = "tuplities-mut"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-ord"
+name = "tuplities-option"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-partial-eq"
+name = "tuplities-ord"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-partial-ord"
+name = "tuplities-partial-eq"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-pop-back"
+name = "tuplities-partial-ord"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-pop-front"
+name = "tuplities-pop"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
+ "typenum",
 ]
 
 [[package]]
-name = "tupilities-push-back"
+name = "tuplities-pop-back"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-push-front"
+name = "tuplities-pop-front"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
 
 [[package]]
-name = "tupilities-ref"
+name = "tuplities-push-back"
 version = "0.1.0"
 dependencies = [
- "tupilities-derive",
+ "tuplities-derive",
 ]
+
+[[package]]
+name = "tuplities-push-front"
+version = "0.1.0"
+dependencies = [
+ "tuplities-derive",
+]
+
+[[package]]
+name = "tuplities-ref"
+version = "0.1.0"
+dependencies = [
+ "tuplities-derive",
+]
+
+[[package]]
+name = "typenum"
+version = "1.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "562d481066bde0658276a35467c4af00bdc6ee726305698a55b86e61d7ad82bb"
 
 [[package]]
 name = "unicode-ident"

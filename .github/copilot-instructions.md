@@ -1,30 +1,30 @@
-# Tupilities Copilot Instructions
+# tuplities Copilot Instructions
 
 ## Architecture Overview
 This is a Rust workspace providing tuple utilities. The project is split into three crates for improved compile times:
 
-- `tupilities/`: Main crate that re-exports traits from subcrates
-- `tupilities-{snake_trait_name}/`: One of several crates of the suite which provides the `Tuple{camel_trait_name}` trait with derive macro implementation
-- `tupilities-derive/`: Procedural macro crate that generates all of the trait implementations for tuples of various sizes
+- `tuplities/`: Main crate that re-exports traits from subcrates
+- `tuplities-{snake_trait_name}/`: One of several crates of the suite which provides the `Tuple{camel_trait_name}` trait with derive macro implementation
+- `tuplities-derive/`: Procedural macro crate that generates all of the trait implementations for tuples of various sizes
 
 The derive macro generates implementations for tuples from size 0 (unit `()`) up to `MAX_TUPLE_SIZE`, controlled by Cargo features to balance functionality against compile time.
 
 ## Key Patterns
 
-- **Feature-gated sizes**: Use features like `size-16`, `size-32` to control maximum supported tuple size (default: 8). See `tupilities-derive/src/tuple_size.rs` for size configuration logic.
-- **Procedural macro generation**: Implementations are generated using `generate_all_sizes()` function that iterates over tuple sizes. See `tupilities-derive/src/tupilities_clone.rs` for the pattern.
+- **Feature-gated sizes**: Use features like `size-16`, `size-32` to control maximum supported tuple size (default: 8). See `tuplities-derive/src/tuple_size.rs` for size configuration logic.
+- **Procedural macro generation**: Implementations are generated using `generate_all_sizes()` function that iterates over tuple sizes. See `tuplities-derive/src/tuplities_clone.rs` for the pattern.
 - **Type parameter generation**: Use `type_params()` and `indices()` helpers in `tuple_size.rs` for generating generic type lists and field access indices.
 
 ## Developer Workflows
 - Build all crates: `cargo build --workspace`
 - Run tests: `cargo test --workspace`
 - Enable larger tuple support: `cargo build --workspace --features size-32` (propagates to all crates)
-- Debug macro expansion: `cargo expand --package tupilities-derive`
+- Debug macro expansion: `cargo expand --package tuplities-derive`
 
 ## Code Examples
 ```rust
 // Basic usage
-use tupilities::prelude::TupleClone;
+use tuplities::prelude::TupleClone;
 
 let original = (1, "hello".to_string(), vec![1, 2, 3]);
 let cloned = original.tuple_clone();

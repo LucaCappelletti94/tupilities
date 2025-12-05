@@ -9,11 +9,13 @@ pub mod prelude {
     pub use tupilities_default::TupleDefault;
     pub use tupilities_eq::TupleEq;
     pub use tupilities_hash::{TupleHash, TupleSipHasher24};
+    pub use tupilities_index::{TupleIndex, TupleIndexMut};
     pub use tupilities_mut::TupleMut;
     pub use tupilities_option::{IntoTupleOption, TupleOption};
     pub use tupilities_ord::TupleOrd;
     pub use tupilities_partial_eq::TuplePartialEq;
     pub use tupilities_partial_ord::TuplePartialOrd;
+    pub use tupilities_pop::Pop;
     pub use tupilities_pop_back::PopBack;
     pub use tupilities_pop_front::PopFront;
     pub use tupilities_push_back::PushBack;

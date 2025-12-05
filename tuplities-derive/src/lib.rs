@@ -9,11 +9,13 @@ mod tupilities_debug;
 mod tupilities_default;
 mod tupilities_eq;
 mod tupilities_hash;
+mod tupilities_index;
 mod tupilities_mut;
 mod tupilities_option;
 mod tupilities_ord;
 mod tupilities_partial_eq;
 mod tupilities_partial_ord;
+mod tupilities_pop;
 mod tupilities_pop_back;
 mod tupilities_pop_front;
 mod tupilities_push_back;
@@ -114,6 +116,22 @@ pub fn impl_pop_front(_attr: TokenStream, item: TokenStream) -> TokenStream {
 pub fn impl_pop_back(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let mut item = proc_macro2::TokenStream::from(item);
     item.extend(tupilities_pop_back::impl_pop_back());
+    item.into()
+}
+
+/// Generate `Pop<Idx>` trait implementations for all tuple sizes and indices.
+#[proc_macro_attribute]
+pub fn impl_pop(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_pop::impl_pop());
+    item.into()
+}
+
+/// Generate `TupleIndex<Idx>` trait implementations for all tuple sizes and indices.
+#[proc_macro_attribute]
+pub fn impl_tuple_index(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_index::impl_tuple_index());
     item.into()
 }
 
