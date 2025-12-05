@@ -48,7 +48,9 @@ dependencies = [
  "tupilities-default",
  "tupilities-eq",
  "tupilities-hash",
+ "tupilities-ord",
  "tupilities-partial-eq",
+ "tupilities-partial-ord",
 ]
 
 [[package]]
@@ -112,7 +114,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "tupilities-ord"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
 name = "tupilities-partial-eq"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
+name = "tupilities-partial-ord"
 version = "0.1.0"
 dependencies = [
  "tupilities-derive",

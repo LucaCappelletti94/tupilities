@@ -28,6 +28,8 @@ The library provides several traits for working with tuples:
 - `TupleAsRef`: Provides an `as_tuple_ref()` method that returns a tuple of references to a common type. All elements must implement `AsRef<T>` for the same `T`.
 - `TuplePartialEq`: Provides a `tuple_eq()` method to compare tuples for partial equality. All elements must implement `PartialEq`.
 - `TupleEq`: Provides a `tuple_eq()` method to compare tuples for total equality. All elements must implement `Eq`.
+- `TuplePartialOrd`: Provides a `tuple_partial_cmp()` method to compare tuples for partial ordering. All elements must implement `PartialOrd`.
+- `TupleOrd`: Provides a `tuple_cmp()` method to compare tuples for total ordering. All elements must implement `Ord`.
 
 ## Features
 

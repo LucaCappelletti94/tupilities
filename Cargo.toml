@@ -10,7 +10,9 @@ members = [
 	"tupilities-default",
 	"tupilities-eq",
 	"tupilities-hash",
+	"tupilities-ord",
 	"tupilities-partial-eq",
+	"tupilities-partial-ord",
 	"tupilities-derive",
 ]
 
@@ -22,7 +24,9 @@ tupilities-debug = { path = "tupilities-debug" }
 tupilities-default = { path = "tupilities-default" }
 tupilities-eq = { path = "tupilities-eq" }
 tupilities-hash = { path = "tupilities-hash" }
+tupilities-ord = { path = "tupilities-ord" }
 tupilities-partial-eq = { path = "tupilities-partial-eq" }
+tupilities-partial-ord = { path = "tupilities-partial-ord" }
 tupilities-derive = { path = "tupilities-derive" }
 siphasher = { version = "1" }
 
