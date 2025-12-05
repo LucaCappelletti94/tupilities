@@ -1,5 +1,5 @@
 #![no_std]
-#![doc = "../README.md"]
+#![doc = include_str!("../../README.md")]
 
 /// Re-exports of commonly used traits and types.
 pub mod prelude {
