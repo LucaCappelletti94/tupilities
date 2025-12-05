@@ -1,4 +1,7 @@
 //! Tupilities suite crate providing the `TupleDebug` trait.
+#![no_std]
+
+extern crate alloc;
 
 #[tupilities_derive::impl_tuple_debug]
 /// A trait for debugging tuples.
@@ -15,5 +18,5 @@ pub trait TupleDebug {
     ///
     /// assert_eq!(debug_str, "(1, \"hello\", 3.14)");
     /// ```
-    fn tuple_debug(&self) -> String;
+    fn tuple_debug(&self) -> alloc::string::String;
 }

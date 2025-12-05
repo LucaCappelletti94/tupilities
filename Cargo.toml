@@ -1,13 +1,24 @@
 [workspace]
 resolver = "2"
 
-members = ["tupilities", "tupilities-clone", "tupilities-copy", "tupilities-debug", "tupilities-derive"]
+members = [
+	"tupilities",
+	"tupilities-clone",
+	"tupilities-copy",
+	"tupilities-debug",
+	"tupilities-default",
+	"tupilities-hash",
+	"tupilities-derive",
+]
 
 [workspace.dependencies]
 tupilities-clone = { path = "tupilities-clone" }
 tupilities-copy = { path = "tupilities-copy" }
 tupilities-debug = { path = "tupilities-debug" }
+tupilities-default = { path = "tupilities-default" }
+tupilities-hash = { path = "tupilities-hash" }
 tupilities-derive = { path = "tupilities-derive" }
+siphasher = { version = "1" }
 
 [workspace.lints.rust]
 missing_docs = "forbid"

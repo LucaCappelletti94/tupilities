@@ -11,16 +11,16 @@ pub fn impl_tuple_debug() -> proc_macro2::TokenStream {
         let indices = indices(size);
 
         quote! {
-            impl<#(#type_params: std::fmt::Debug,)*> TupleDebug for (#(#type_params,)*)
+            impl<#(#type_params: core::fmt::Debug,)*> TupleDebug for (#(#type_params,)*)
             {
                 #[inline]
-                fn tuple_debug(&self) -> String {
-                    let parts: Vec<String> = vec![
+                fn tuple_debug(&self) -> alloc::string::String {
+                    let parts: alloc::vec::Vec<alloc::string::String> = alloc::vec![
                         #(
-                            format!("{:?}", self.#indices),
+                            alloc::format!("{:?}", self.#indices),
                         )*
                     ];
-                    format!(
+                    alloc::format!(
                         "({})",
                         parts.join(", ")
                     )

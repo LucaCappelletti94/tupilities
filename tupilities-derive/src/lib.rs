@@ -5,6 +5,8 @@ use proc_macro::TokenStream;
 mod tupilities_clone;
 mod tupilities_copy;
 mod tupilities_debug;
+mod tupilities_default;
+mod tupilities_hash;
 mod tuple_size;
 
 /// Generate `TableIndex` trait implementations for all tuple sizes.
@@ -28,5 +30,21 @@ pub fn impl_tuple_copy(_attr: TokenStream, item: TokenStream) -> TokenStream {
 pub fn impl_tuple_debug(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let mut item = proc_macro2::TokenStream::from(item);
     item.extend(tupilities_debug::impl_tuple_debug());
+    item.into()
+}
+
+/// Generate `TupleDefault` trait implementations for all tuple sizes.
+#[proc_macro_attribute]
+pub fn impl_tuple_default(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_default::impl_tuple_default());
+    item.into()
+}
+
+/// Generate `TupleHash` trait implementations for all tuple sizes.
+#[proc_macro_attribute]
+pub fn impl_tuple_hash(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tupilities_hash::impl_tuple_hash());
     item.into()
 }

@@ -1,3 +1,5 @@
+#![no_std]
+
 //! Tupilities suite crate providing the `TupleClone` trait.
 
 #[tupilities_derive::impl_tuple_clone]

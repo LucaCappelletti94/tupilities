@@ -21,6 +21,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "siphasher"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "56199f7ddabf13fe5074ce809e7d3f42b42ae711800501b5b16ea82ad029c39d"
+
+[[package]]
 name = "syn"
 version = "2.0.111"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -38,6 +44,8 @@ dependencies = [
  "tupilities-clone",
  "tupilities-copy",
  "tupilities-debug",
+ "tupilities-default",
+ "tupilities-hash",
 ]
 
 [[package]]
@@ -62,12 +70,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "tupilities-default"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
 name = "tupilities-derive"
 version = "0.1.0"
 dependencies = [
  "proc-macro2",
  "quote",
+ "siphasher",
  "syn",
+]
+
+[[package]]
+name = "tupilities-hash"
+version = "0.1.0"
+dependencies = [
+ "siphasher",
+ "tupilities-derive",
 ]
 
 [[package]]
