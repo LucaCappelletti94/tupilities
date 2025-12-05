@@ -1,7 +1,14 @@
 [package]
 name = "tuplities-option"
-version = "0.1.0"
-edition = "2024"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+description.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
 
 [dependencies]
 tuplities-derive.workspace = true

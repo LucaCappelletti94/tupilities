@@ -26,28 +26,38 @@ members = [
   "tuplities-derive",
 ]
 
+[workspace.package]
+authors = ["Luca Cappelletti"]
+edition = "2024"
+description = "A collection of utilities for working with tuples in Rust."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/lucacappelletti/tuplities"
+keywords = ["tuples", "utilities", "metaprogramming", "typenum"]
+categories = ["development-tools", "data-structures"]
+version = "0.1.0"
+
 [workspace.dependencies]
-tuplities-clone = { path = "tuplities-clone" }
-tuplities-copy = { path = "tuplities-copy" }
-tuplities-debug = { path = "tuplities-debug" }
-tuplities-default = { path = "tuplities-default" }
-tuplities-eq = { path = "tuplities-eq" }
-tuplities-hash = { path = "tuplities-hash" }
-tuplities-mut = { path = "tuplities-mut" }
-tuplities-option = { path = "tuplities-option" }
-tuplities-ord = { path = "tuplities-ord" }
-tuplities-partial-eq = { path = "tuplities-partial-eq" }
-tuplities-partial-ord = { path = "tuplities-partial-ord" }
-tuplities-remove = { path = "tuplities-remove" }
-tuplities-insert = { path = "tuplities-insert" }
-tuplities-len = { path = "tuplities-len" }
-tuplities-index = { path = "tuplities-index" }
-tuplities-pop-front = { path = "tuplities-pop-front" }
-tuplities-pop-back = { path = "tuplities-pop-back" }
-tuplities-push-front = { path = "tuplities-push-front" }
-tuplities-push-back = { path = "tuplities-push-back" }
-tuplities-ref = { path = "tuplities-ref" }
-tuplities-derive = { path = "tuplities-derive" }
+tuplities-clone = { path = "tuplities-clone", version = "0.1.0" }
+tuplities-copy = { path = "tuplities-copy", version = "0.1.0" }
+tuplities-debug = { path = "tuplities-debug", version = "0.1.0" }
+tuplities-default = { path = "tuplities-default", version = "0.1.0" }
+tuplities-eq = { path = "tuplities-eq", version = "0.1.0" }
+tuplities-hash = { path = "tuplities-hash", version = "0.1.0" }
+tuplities-mut = { path = "tuplities-mut", version = "0.1.0" }
+tuplities-option = { path = "tuplities-option", version = "0.1.0" }
+tuplities-ord = { path = "tuplities-ord", version = "0.1.0" }
+tuplities-partial-eq = { path = "tuplities-partial-eq", version = "0.1.0" }
+tuplities-partial-ord = { path = "tuplities-partial-ord", version = "0.1.0" }
+tuplities-remove = { path = "tuplities-remove", version = "0.1.0" }
+tuplities-insert = { path = "tuplities-insert", version = "0.1.0" }
+tuplities-len = { path = "tuplities-len", version = "0.1.0" }
+tuplities-index = { path = "tuplities-index", version = "0.1.0" }
+tuplities-pop-front = { path = "tuplities-pop-front", version = "0.1.0" }
+tuplities-pop-back = { path = "tuplities-pop-back", version = "0.1.0" }
+tuplities-push-front = { path = "tuplities-push-front", version = "0.1.0" }
+tuplities-push-back = { path = "tuplities-push-back", version = "0.1.0" }
+tuplities-ref = { path = "tuplities-ref", version = "0.1.0" }
+tuplities-derive = { path = "tuplities-derive", version = "0.1.0" }
 siphasher = { version = "1" }
 typenum = { version = "1" }
 
