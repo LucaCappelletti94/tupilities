@@ -13,6 +13,7 @@ homepage.workspace = true
 
 [dependencies]
 tuplities-derive.workspace = true
+tuplities-clone.workspace = true
 
 [lints]
 workspace = true

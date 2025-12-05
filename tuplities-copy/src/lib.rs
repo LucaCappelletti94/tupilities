@@ -2,9 +2,11 @@
 
 //! [tuplities](https://github.com/lucacappelletti94/tuplities) suite crate providing the `TupleCopy` trait.
 
+use tuplities_clone::TupleClone;
+
 #[tuplities_derive::impl_tuple_copy]
 /// A trait for copying tuples.
-pub trait TupleCopy {
+pub trait TupleCopy: TupleClone {
     #[must_use]
     /// Copies `self` into a new instance.
     ///
