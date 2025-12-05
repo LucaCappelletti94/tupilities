@@ -13,10 +13,10 @@ pub fn impl_push_back() -> proc_macro2::TokenStream {
         quote! {
             impl<T, #(#type_params,)*> TuplePushBack<T> for (#(#type_params,)*)
             {
-                type Output = (#(#type_params,)* T);
+                type Output = (#(#type_params,)* T,);
 
                 fn push_back(self, value: T) -> Self::Output {
-                    (#(self.#indices,)* value)
+                    (#(self.#indices,)* value,)
                 }
             }
         }
