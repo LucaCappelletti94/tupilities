@@ -6,7 +6,7 @@
 /// A trait for transposing a tuple of options into an option of a tuple.
 pub trait TupleOption {
     /// The transposed type: an option of the tuple of the inner types.
-    type Transposed: IntoTupleOption<AsOptions = Self>;
+    type Transposed: IntoTupleOption<IntoOptions = Self>;
 
     /// Transposes the tuple of options into an option of the tuple.
     ///
@@ -31,7 +31,7 @@ pub trait TupleOption {
 /// A trait for converting a tuple into a tuple of options.
 pub trait IntoTupleOption {
     /// The tuple of options type.
-    type AsOptions: TupleOption<Transposed = Self>;
+    type IntoOptions: TupleOption<Transposed = Self>;
 
     /// Converts the tuple into a tuple of `Some` values.
     ///
@@ -41,8 +41,8 @@ pub trait IntoTupleOption {
     /// use tupilities_option::IntoTupleOption;
     ///
     /// let tuple = (1, 2);
-    /// let as_options: (Option<i32>, Option<i32>) = tuple.as_options();
-    /// assert_eq!(as_options, (Some(1), Some(2)));
+    /// let into_options: (Option<i32>, Option<i32>) = tuple.into_options();
+    /// assert_eq!(into_options, (Some(1), Some(2)));
     /// ```
-    fn as_options(self) -> Self::AsOptions;
+    fn into_options(self) -> Self::IntoOptions;
 }
