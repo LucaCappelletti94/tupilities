@@ -1,0 +1,19 @@
+//! Tupilities suite crate providing the `TupleDebug` trait.
+
+#[tupilities_derive::impl_tuple_debug]
+/// A trait for debugging tuples.
+pub trait TupleDebug {
+    /// Returns a string representation of the tuple for debugging.
+    ///
+    /// # Examples
+    ///
+    /// ```rust
+    /// use tupilities_debug::TupleDebug;
+    ///
+    /// let tuple = (1, "hello", 3.14);
+    /// let debug_str = tuple.tuple_debug();
+    ///
+    /// assert_eq!(debug_str, "(1, \"hello\", 3.14)");
+    /// ```
+    fn tuple_debug(&self) -> String;
+}

@@ -1,10 +1,12 @@
 [workspace]
 resolver = "2"
 
-members = ["tupilities", "tupilities-clone", "tupilities-derive"]
+members = ["tupilities", "tupilities-clone", "tupilities-copy", "tupilities-debug", "tupilities-derive"]
 
 [workspace.dependencies]
 tupilities-clone = { path = "tupilities-clone" }
+tupilities-copy = { path = "tupilities-copy" }
+tupilities-debug = { path = "tupilities-debug" }
 tupilities-derive = { path = "tupilities-derive" }
 
 [workspace.lints.rust]

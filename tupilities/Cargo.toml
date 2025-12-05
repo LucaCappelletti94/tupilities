@@ -5,15 +5,17 @@ edition = "2024"
 
 [dependencies]
 tupilities-clone.workspace = true
+tupilities-copy.workspace = true
+tupilities-debug.workspace = true
 
 [lints]
 workspace = true
 
 [features]
 default = []
-size-16 = ["tupilities-clone/size-16"]
-size-32 = ["tupilities-clone/size-32"]
-size-48 = ["tupilities-clone/size-48"]
-size-64 = ["tupilities-clone/size-64"]
-size-96 = ["tupilities-clone/size-96"]
-size-128 = ["tupilities-clone/size-128"]
+size-16 = ["tupilities-clone/size-16", "tupilities-copy/size-16", "tupilities-debug/size-16"]
+size-32 = ["tupilities-clone/size-32", "tupilities-copy/size-32", "tupilities-debug/size-32"]
+size-48 = ["tupilities-clone/size-48", "tupilities-copy/size-48", "tupilities-debug/size-48"]
+size-64 = ["tupilities-clone/size-64", "tupilities-copy/size-64", "tupilities-debug/size-64"]
+size-96 = ["tupilities-clone/size-96", "tupilities-copy/size-96", "tupilities-debug/size-96"]
+size-128 = ["tupilities-clone/size-128", "tupilities-copy/size-128", "tupilities-debug/size-128"]

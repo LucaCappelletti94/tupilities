@@ -53,6 +53,8 @@ pub const MAX_TUPLE_SIZE: usize = 48;
 /// Maximum number of elements supported in tuple implementations.
 pub const MAX_TUPLE_SIZE: usize = 64;
 #[cfg(all(feature = "size-96", not(feature = "size-128")))]
+/// Maximum number of elements supported in tuple implementations.
+pub const MAX_TUPLE_SIZE: usize = 96;
 #[cfg(feature = "size-128")]
 /// Maximum number of elements supported in tuple implementations.
 pub const MAX_TUPLE_SIZE: usize = 128;

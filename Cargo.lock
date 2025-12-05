@@ -36,10 +36,26 @@ name = "tupilities"
 version = "0.1.0"
 dependencies = [
  "tupilities-clone",
+ "tupilities-copy",
+ "tupilities-debug",
 ]
 
 [[package]]
 name = "tupilities-clone"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
+name = "tupilities-copy"
+version = "0.1.0"
+dependencies = [
+ "tupilities-derive",
+]
+
+[[package]]
+name = "tupilities-debug"
 version = "0.1.0"
 dependencies = [
  "tupilities-derive",
