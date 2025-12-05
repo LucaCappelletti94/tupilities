@@ -33,11 +33,13 @@ The library provides several traits for working with tuples:
 - `IntoTupleOption`: Provides an `into_options()` method to convert a tuple into a tuple of options.
 - `TupleRef`: Provides a `tuple_ref()` method to get references to each element in the tuple.
 - `TupleMut`: Provides a `tuple_mut()` method to get mutable references to each element in the tuple.
-- `PopFront`: Provides a `pop_front()` method to remove and return the first element of the tuple along with the remaining elements as a new tuple.
-- `PopBack`: Provides a `pop_back()` method to remove and return the last element of the tuple along with the remaining elements as a new tuple.
-- `PushFront<T>`: Provides a `push_front(element)` method to add an element to the front of the tuple, returning a new tuple.
-- `PushBack<T>`: Provides a `push_back(element)` method to add an element to the back of the tuple, returning a new tuple.
-- `Pop<Idx>`: Provides a `pop()` method to remove and return the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple along with the remaining elements as a new tuple.
+- `TuplePopFront`: Provides a `pop_front()` method to remove and return the first element of the tuple along with the remaining elements as a new tuple.
+- `TuplePopBack`: Provides a `pop_back()` method to remove and return the last element of the tuple along with the remaining elements as a new tuple.
+- `TuplePushFront<T>`: Provides a `push_front(element)` method to add an element to the front of the tuple, returning a new tuple.
+- `TuplePushBack<T>`: Provides a `push_back(element)` method to add an element to the back of the tuple, returning a new tuple.
+- `TupleRemove<Idx>`: Provides a `remove()` method to remove and return the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple along with the remaining elements as a new tuple.
+- `TupleInsert<Idx, T>`: Provides an `insert()` method to insert an element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` into the tuple, returning the tuple with the element inserted.
+- `TupleLen`: Provides the length of the tuple as a compile-time `typenum::Unsigned` type.
 - `TupleIndex<Idx>`: Provides an `index()` method to access the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple.
 - `TupleIndexMut<Idx>`: Provides an `index_mut()` method to access a mutable reference to the element at the specified index [`typenum`](https://docs.rs/typenum/latest/typenum/)'s `Idx` of the tuple.
 

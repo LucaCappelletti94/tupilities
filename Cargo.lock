@@ -48,17 +48,19 @@ dependencies = [
  "tuplities-eq",
  "tuplities-hash",
  "tuplities-index",
+ "tuplities-insert",
+ "tuplities-len",
  "tuplities-mut",
  "tuplities-option",
  "tuplities-ord",
  "tuplities-partial-eq",
  "tuplities-partial-ord",
- "tuplities-pop",
  "tuplities-pop-back",
  "tuplities-pop-front",
  "tuplities-push-back",
  "tuplities-push-front",
  "tuplities-ref",
+ "tuplities-remove",
 ]
 
 [[package]]
@@ -124,6 +126,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "tuplities-insert"
+version = "0.1.0"
+dependencies = [
+ "tuplities-derive",
+ "typenum",
+]
+
+[[package]]
+name = "tuplities-len"
+version = "0.1.0"
+dependencies = [
+ "tuplities-derive",
+ "typenum",
+]
+
+[[package]]
 name = "tuplities-mut"
 version = "0.1.0"
 dependencies = [
@@ -159,14 +177,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tuplities-pop"
-version = "0.1.0"
-dependencies = [
- "tuplities-derive",
- "typenum",
-]
-
-[[package]]
 name = "tuplities-pop-back"
 version = "0.1.0"
 dependencies = [
@@ -199,6 +209,14 @@ name = "tuplities-ref"
 version = "0.1.0"
 dependencies = [
  "tuplities-derive",
+]
+
+[[package]]
+name = "tuplities-remove"
+version = "0.1.0"
+dependencies = [
+ "tuplities-derive",
+ "typenum",
 ]
 
 [[package]]

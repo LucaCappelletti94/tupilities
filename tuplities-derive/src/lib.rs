@@ -2,6 +2,7 @@
 
 use proc_macro::TokenStream;
 
+mod tuple_size;
 mod tuplities_as_ref;
 mod tuplities_clone;
 mod tuplities_copy;
@@ -10,18 +11,19 @@ mod tuplities_default;
 mod tuplities_eq;
 mod tuplities_hash;
 mod tuplities_index;
+mod tuplities_insert;
+mod tuplities_len;
 mod tuplities_mut;
 mod tuplities_option;
 mod tuplities_ord;
 mod tuplities_partial_eq;
 mod tuplities_partial_ord;
-mod tuplities_pop;
 mod tuplities_pop_back;
 mod tuplities_pop_front;
 mod tuplities_push_back;
 mod tuplities_push_front;
 mod tuplities_ref;
-mod tuple_size;
+mod tuplities_remove;
 
 /// Generate `TableIndex` trait implementations for all tuple sizes.
 #[proc_macro_attribute]
@@ -119,11 +121,27 @@ pub fn impl_pop_back(_attr: TokenStream, item: TokenStream) -> TokenStream {
     item.into()
 }
 
-/// Generate `Pop<Idx>` trait implementations for all tuple sizes and indices.
+/// Generate `TupleRemove<Idx>` trait implementations for all tuple sizes and indices.
 #[proc_macro_attribute]
-pub fn impl_pop(_attr: TokenStream, item: TokenStream) -> TokenStream {
+pub fn impl_remove(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let mut item = proc_macro2::TokenStream::from(item);
-    item.extend(tuplities_pop::impl_pop());
+    item.extend(tuplities_remove::impl_remove());
+    item.into()
+}
+
+/// Generate `TupleInsert<Idx, T>` trait implementations for all tuple sizes and indices.
+#[proc_macro_attribute]
+pub fn impl_insert(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tuplities_insert::impl_insert());
+    item.into()
+}
+
+/// Generate `TupleLen` trait implementations for all tuple sizes.
+#[proc_macro_attribute]
+pub fn impl_len(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let mut item = proc_macro2::TokenStream::from(item);
+    item.extend(tuplities_len::impl_len());
     item.into()
 }
 

@@ -1,10 +1,10 @@
-//! Submodule providing the derive macro for the `PopFront` trait.
+//! Submodule providing the derive macro for the `TuplePopFront` trait.
 
 use quote::quote;
 
 use crate::tuple_size::{generate_non_empty, indices, type_params};
 
-/// Generate `PopFront` trait implementations for all tuple sizes starting from 1.
+/// Generate `TuplePopFront` trait implementations for all tuple sizes starting from 1.
 pub fn impl_pop_front() -> proc_macro2::TokenStream {
     generate_non_empty(|size| {
         let type_params = type_params(size);
@@ -13,7 +13,7 @@ pub fn impl_pop_front() -> proc_macro2::TokenStream {
         let (first_index, other_indices) = indices.split_first().unwrap();
 
         quote! {
-            impl<#(#type_params,)*> PopFront for (#(#type_params,)*)
+            impl<#(#type_params,)*> TuplePopFront for (#(#type_params,)*)
             {
                 type Front = #first;
                 type Tail = (#(#others,)*);

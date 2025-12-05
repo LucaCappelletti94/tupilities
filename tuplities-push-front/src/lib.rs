@@ -1,10 +1,10 @@
 #![no_std]
 
-//! tuplities suite crate providing the `PushFront` trait.
+//! tuplities suite crate providing the `TuplePushFront` trait.
 
 #[tuplities_derive::impl_push_front]
 /// A trait for tuples that allows pushing an element to the front.
-pub trait PushFront<T> {
+pub trait TuplePushFront<T> {
     /// The type of the tuple after adding `T` to the front.
     type Output;
 
@@ -13,7 +13,7 @@ pub trait PushFront<T> {
     /// # Examples
     ///
     /// ```rust
-    /// use tuplities_push_front::PushFront;
+    /// use tuplities_push_front::TuplePushFront;
     ///
     /// let tuple = ("world",);
     /// let new_tuple = tuple.push_front("hello");

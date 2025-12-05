@@ -15,7 +15,9 @@ tuplities-option.workspace = true
 tuplities-ord.workspace = true
 tuplities-partial-eq.workspace = true
 tuplities-partial-ord.workspace = true
-tuplities-pop.workspace = true
+tuplities-remove.workspace = true
+tuplities-insert.workspace = true
+tuplities-len.workspace = true
 tuplities-index.workspace = true
 tuplities-pop-front.workspace = true
 tuplities-pop-back.workspace = true
@@ -40,7 +42,9 @@ size-16 = [
   "tuplities-partial-eq/size-16",
   "tuplities-partial-ord/size-16",
   "tuplities-mut/size-16",
-  "tuplities-pop/size-16",
+  "tuplities-remove/size-16",
+  "tuplities-insert/size-16",
+  "tuplities-len/size-16",
   "tuplities-index/size-16",
   "tuplities-ref/size-16",
   "tuplities-pop-front/size-16",
@@ -60,7 +64,9 @@ size-32 = [
   "tuplities-partial-eq/size-32",
   "tuplities-partial-ord/size-32",
   "tuplities-mut/size-32",
-  "tuplities-pop/size-32",
+  "tuplities-remove/size-32",
+  "tuplities-insert/size-32",
+  "tuplities-len/size-32",
   "tuplities-index/size-32",
   "tuplities-ref/size-32",
   "tuplities-pop-front/size-32",
@@ -80,7 +86,9 @@ size-48 = [
   "tuplities-partial-eq/size-48",
   "tuplities-partial-ord/size-48",
   "tuplities-mut/size-48",
-  "tuplities-pop/size-48",
+  "tuplities-remove/size-48",
+  "tuplities-insert/size-48",
+  "tuplities-len/size-48",
   "tuplities-index/size-48",
   "tuplities-ref/size-48",
   "tuplities-pop-front/size-48",
@@ -100,7 +108,9 @@ size-64 = [
   "tuplities-partial-eq/size-64",
   "tuplities-partial-ord/size-64",
   "tuplities-mut/size-64",
-  "tuplities-pop/size-64",
+  "tuplities-remove/size-64",
+  "tuplities-insert/size-64",
+  "tuplities-len/size-64",
   "tuplities-index/size-64",
   "tuplities-ref/size-64",
   "tuplities-pop-front/size-64",
@@ -120,7 +130,9 @@ size-96 = [
   "tuplities-partial-eq/size-96",
   "tuplities-partial-ord/size-96",
   "tuplities-mut/size-96",
-  "tuplities-pop/size-96",
+  "tuplities-remove/size-96",
+  "tuplities-insert/size-96",
+  "tuplities-len/size-96",
   "tuplities-index/size-96",
   "tuplities-ref/size-96",
   "tuplities-pop-front/size-96",
@@ -140,7 +152,9 @@ size-128 = [
   "tuplities-partial-eq/size-128",
   "tuplities-partial-ord/size-128",
   "tuplities-mut/size-128",
-  "tuplities-pop/size-128",
+  "tuplities-remove/size-128",
+  "tuplities-insert/size-128",
+  "tuplities-len/size-128",
   "tuplities-index/size-128",
   "tuplities-ref/size-128",
   "tuplities-pop-front/size-128",

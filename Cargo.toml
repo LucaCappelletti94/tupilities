@@ -14,7 +14,9 @@ members = [
   "tuplities-ord",
   "tuplities-partial-eq",
   "tuplities-partial-ord",
-  "tuplities-pop",
+  "tuplities-remove",
+  "tuplities-insert",
+  "tuplities-len",
   "tuplities-index",
   "tuplities-pop-front",
   "tuplities-pop-back",
@@ -36,7 +38,9 @@ tuplities-option = { path = "tuplities-option" }
 tuplities-ord = { path = "tuplities-ord" }
 tuplities-partial-eq = { path = "tuplities-partial-eq" }
 tuplities-partial-ord = { path = "tuplities-partial-ord" }
-tuplities-pop = { path = "tuplities-pop" }
+tuplities-remove = { path = "tuplities-remove" }
+tuplities-insert = { path = "tuplities-insert" }
+tuplities-len = { path = "tuplities-len" }
 tuplities-index = { path = "tuplities-index" }
 tuplities-pop-front = { path = "tuplities-pop-front" }
 tuplities-pop-back = { path = "tuplities-pop-back" }

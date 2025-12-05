@@ -10,15 +10,17 @@ pub mod prelude {
     pub use tuplities_eq::TupleEq;
     pub use tuplities_hash::{TupleHash, TupleSipHasher24};
     pub use tuplities_index::{TupleIndex, TupleIndexMut};
+    pub use tuplities_insert::TupleInsert;
+    pub use tuplities_len::TupleLen;
     pub use tuplities_mut::TupleMut;
     pub use tuplities_option::{IntoTupleOption, TupleOption};
     pub use tuplities_ord::TupleOrd;
     pub use tuplities_partial_eq::TuplePartialEq;
     pub use tuplities_partial_ord::TuplePartialOrd;
-    pub use tuplities_pop::Pop;
-    pub use tuplities_pop_back::PopBack;
-    pub use tuplities_pop_front::PopFront;
-    pub use tuplities_push_back::PushBack;
-    pub use tuplities_push_front::PushFront;
+    pub use tuplities_pop_back::TuplePopBack;
+    pub use tuplities_pop_front::TuplePopFront;
+    pub use tuplities_push_back::TuplePushBack;
+    pub use tuplities_push_front::TuplePushFront;
     pub use tuplities_ref::TupleRef;
+    pub use tuplities_remove::TupleRemove;
 }

@@ -1,10 +1,10 @@
-//! Submodule providing the derive macro for the `PopBack` trait.
+//! Submodule providing the derive macro for the `TuplePopBack` trait.
 
 use quote::quote;
 
 use crate::tuple_size::{generate_non_empty, indices, type_params};
 
-/// Generate `PopBack` trait implementations for all tuple sizes starting from 1.
+/// Generate `TuplePopBack` trait implementations for all tuple sizes starting from 1.
 pub fn impl_pop_back() -> proc_macro2::TokenStream {
     generate_non_empty(|size| {
         let type_params = type_params(size);
@@ -13,7 +13,7 @@ pub fn impl_pop_back() -> proc_macro2::TokenStream {
         let (last_index, other_indices) = indices.split_last().unwrap();
 
         quote! {
-            impl<#(#type_params,)*> PopBack for (#(#type_params,)*)
+            impl<#(#type_params,)*> TuplePopBack for (#(#type_params,)*)
             {
                 type Init = (#(#others,)*);
                 type Back = #last;
