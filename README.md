@@ -9,6 +9,8 @@
 
 Tuple utilities in Rust, fractioned across several crates to improve compile times. There is a main crate `tupilities` that re-exports traits from subcrates, which can be compiled in parallel cutting down on overall build times.
 
+This library is `#[no_std]` compatible, making it suitable for embedded systems and other environments without the standard library.
+
 ```toml
 [dependencies]
 tupilities = "0.1"
@@ -16,11 +18,31 @@ tupilities = "0.1"
 
 ## Traits
 
-- `TupleClone`: A trait that provides a method to clone tuples of various sizes. All elements of the tuple must implement the `Clone` trait.
+The library provides several traits for working with tuples:
+
+- `TupleClone`: Provides a `tuple_clone()` method to clone tuples. All elements must implement `Clone`.
+- `TupleCopy`: Provides a `tuple_copy()` method to copy tuples. All elements must implement `Copy`.
+- `TupleDebug`: Provides a `tuple_debug()` method that returns a debug string representation of the tuple. All elements must implement `Debug`.
+- `TupleDefault`: Provides a `tuple_default()` method to create default instances of tuples. All elements must implement `Default`.
+- `TupleHash`: Provides a `tuple_hash<H: Hasher>()` method to hash tuples with any hasher. All elements must implement `Hash`.
+- `TupleSipHasher24`: Provides a `tuple_sip_hash()` method that returns a hash value using SipHasher24. All elements must implement `Hash`.
 
 ## Features
 
-At this time, the crate provides feature to generate the trait implementations for tuples up until the size of: 8 (default), 16, 32, 48, 64, 96, or 128 elements with the `size-XX` features.
+The crate provides features to generate trait implementations for tuples up to different sizes: 8 (default), 16, 32, 48, 64, 96, or 128 elements. Use the `size-XX` features to enable larger tuple support.
+
+```toml
+[dependencies]
+tupilities = { version = "0.1", features = ["size-32"] }
+```
+
+## Architecture
+
+The project is split into multiple crates for improved compile times:
+
+- `tupilities/`: Main crate that re-exports traits from subcrates
+- `tupilities-{trait_name}/`: Individual crates providing specific traits
+- `tupilities-derive/`: Procedural macro crate that generates trait implementations
 
 ## License
 
