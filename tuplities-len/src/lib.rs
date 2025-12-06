@@ -65,3 +65,25 @@ impl UnitTuple for () {}
 pub trait SingletonTuple: TupleLen<Len = typenum::U1> {}
 
 impl<T> SingletonTuple for (T,) {}
+
+/// A marker trait for two-element tuples (size 2).
+///
+/// This trait is implemented for two-element tuples `(T1, T2)` and can be used
+/// for type-level programming to identify two-element tuples.
+///
+/// # Examples
+///
+/// ```rust
+/// use tuplities_len::{PairTuple, TupleLen};
+/// use typenum::U2;
+/// fn is_pair<T: PairTuple>(_tuple: T) {
+///     // This function only accepts two-element tuples
+/// }
+/// is_pair((1, 2)); // This works
+/// // is_pair((42,)); // This would not compile
+/// // is_pair(()); // This would not compile
+/// ```
+///
+pub trait PairTuple: TupleLen<Len = typenum::U2> {}
+
+impl<T1, T2> PairTuple for (T1, T2) {}

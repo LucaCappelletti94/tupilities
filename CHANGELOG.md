@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TupleReverse` trait for reversing tuple element order
 - `UnitTuple` marker trait for empty tuples `()` with `TupleLen<Len = U0>`
 - `SingletonTuple` marker trait for single-element tuples `(T,)` with `TupleLen<Len = U1>`
+- `PairTuple` marker trait for two-element tuples `(T1, T2)` with `TupleLen<Len = U2>`
 - `TupleTryFrom<T, E>` and `TupleTryInto<U, E>` traits for fallible conversions between tuples where elements implement `TryFrom`/`TryInto`
 - `TupleFrom<T>` and `TupleInto<U>` traits for infallible conversions between tuples where elements implement `From`/`Into`
 - Support for tuple conversions with proper error handling and type safety

@@ -12,7 +12,7 @@ pub mod prelude {
     pub use tuplities_hash::TupleHash;
     pub use tuplities_index::{TupleIndex, TupleIndexMut};
     pub use tuplities_insert::TupleInsert;
-    pub use tuplities_len::{SingletonTuple, TupleLen, UnitTuple};
+    pub use tuplities_len::{PairTuple, SingletonTuple, TupleLen, UnitTuple};
     pub use tuplities_mut::TupleMut;
     pub use tuplities_option::{IntoTupleOption, TupleOption};
     pub use tuplities_ord::TupleOrd;
